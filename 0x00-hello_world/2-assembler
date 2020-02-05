@@ -1,3 +1,2 @@
-#!/bin/bas
-h
-
+#!/bin/bash
+gcc $CPATH -S
