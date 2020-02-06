@@ -5,13 +5,14 @@
  *
  * Return: Always 0 (Success)
  */
-int main()
+int main(void)
 {
 	int a = 0;
-	for(a = 97; a < 123; a++)
+
+	for (a = 97; a < 123; a++)
 	{
 		putchar(a);
 	}
-	putchar('\n');
+	putchar ('\n');
 	return (0);
 }
