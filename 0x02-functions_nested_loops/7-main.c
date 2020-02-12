@@ -9,9 +9,9 @@ int main(void)
 {
     int r;
 
-    print_last_digit(98);
-    print_last_digit(0);
-    r = print_last_digit(-1024);
+    print_last_digit(99800982);
+    print_last_digit(-10000);
+    r = print_last_digit(-10278774);
     _putchar('0' + r);
     _putchar('\n');
     return (0);
