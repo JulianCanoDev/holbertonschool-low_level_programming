@@ -18,7 +18,6 @@ void more_numbers(void)
 				_putchar((num2 / 10) + 48);
 			}
 			_putchar((num2 % 10) + 48);
-			
 		}
 	_putchar('\n');
 	}
