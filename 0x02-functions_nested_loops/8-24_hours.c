@@ -17,23 +17,23 @@ void jack_bauer(void)
 			if (hours <= 9)
 			{
 				_putchar(48);
-				_putchar(hours % 10);
+				_putchar((hours % 10) + 48);
 			}
 			else
 			{
-				_putchar(hours / 10);
-				_putchar(hours % 10);
+				_putchar((hours / 10) + 48);
+				_putchar((hours % 10) + 48);
 			}
 			_putchar(':');
 			if (minutes <= 9)
 			{
 				_putchar(48);
-				_putchar(minutes % 10);
+				_putchar((minutes % 10) + 48);
 			}
 			else
 			{
-				_putchar(minutes / 10);
-				_putchar(minutes % 10);
+				_putchar((minutes / 10) + 48);
+				_putchar((minutes % 10) + 48);
 			}
 			_putchar('\n');
 		}
