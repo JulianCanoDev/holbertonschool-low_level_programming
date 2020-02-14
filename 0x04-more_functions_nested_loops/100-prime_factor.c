@@ -11,7 +11,7 @@ int main(void)
 	int prime_factor;
 	long int num = 612852475143;
 
-	for (i = 2 ; num > 1 ; i ++)
+	for (i = 2 ; num > 1 ; i++)
 	{
 		while ((num % i) == 0)
 		{
