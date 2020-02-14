@@ -6,6 +6,7 @@
  */
 int main(void)
 {
+	int pf;
 	int a = 2;
 	long int b = 612852475143;
 
@@ -13,6 +14,7 @@ int main(void)
 	{
 		if (b % a == 0)
 		{
+			pf = a;
 			b = b / a;
 		}
 		else
@@ -20,6 +22,7 @@ int main(void)
 			a++;
 		}
 	}
-	printf("%ld \n", b);
+	pf = a;
+	printf("%d \n", pf);
 	return (0);
 }
