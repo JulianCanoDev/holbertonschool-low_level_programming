@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 /**
  * main - Entry point
@@ -6,23 +7,18 @@
  */
 int main(void)
 {
-	int pf;
-	int a = 2;
-	long int b = 612852475143;
+	int i;
+	int prime_factor;
+	long int num = 612852475143;
 
-	while (b != a)
+	for (i = 2 ; num > 1 ; i ++)
 	{
-		if (b % a == 0)
+		while ((num % i) == 0)
 		{
-			pf = a;
-			b = b / a;
-		}
-		else
-		{
-			a++;
+			prime_factor = i;
+			num /= i;
 		}
 	}
-	pf = a;
-	printf("%d \n", pf);
-	return (0);
+printf("%d\n", prime_factor);
+return (0);
 }
