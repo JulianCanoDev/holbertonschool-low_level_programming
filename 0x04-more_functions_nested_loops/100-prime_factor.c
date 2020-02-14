@@ -4,7 +4,7 @@
  * main - Entry point
  * Return: Always 0.
  */
-int main (void)
+int main(void)
 {
 	int a = 2;
 	long int b = 612852475143;
