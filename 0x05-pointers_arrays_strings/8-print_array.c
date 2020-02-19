@@ -3,8 +3,8 @@
 
 /**
  * print_array - Entry point
- * @*a: int pointer
- * @n: int variablw
+ * @a: int pointer
+ * @n: int variable
  * Return: Always 0 (Success).
  */
 void print_array(int *a, int n)
