@@ -1,11 +1,24 @@
-#include "holberton.h"
+#include <stdio.h>
 
 /**
- * set_string - Entry point
- * @s: char pointer to pointer
- * @to: char pointer
+ * print_diagsums - Entry point
+ * @a: int pointer
+ * @size: int variable
  * Return: Always 0 (Success).
  */
-void set_string(char **s, char *to)
+void print_diagsums(int *a, int size)
 {
+	int i;
+	int sum1 = 0;
+	int sum2 = 0;
+
+	for (i = 0; i < size * size; i += (size + 1))
+	{
+		sum1 += a[i];
+	}
+	for (i = size - 1; i < (size * size) - (size - 1); i += (size - 1))
+	{
+		sum2 += a[i];
+	}
+	printf("%d, %d\n", sum1, sum2);
 }
