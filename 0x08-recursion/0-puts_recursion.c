@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _puts_recursion
+ * _puts_recursion - Entry point
  * @s: char pointer
  * Return: Always 0 (success).
  */
