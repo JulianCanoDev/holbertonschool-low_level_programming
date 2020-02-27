@@ -29,6 +29,7 @@ int verify(int n, int i)
 int _sqrt_recursion(int n)
 {
 	int i;
+
 	i = verify(n, 1);
 
 	return (i);
