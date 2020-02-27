@@ -1,27 +1,48 @@
-#include "holberton.h"
-
 /**
  * is_prime_number - Entry point
- * @n: int variable
- * Return: ALways 0 (Success).
+ * @p: int variable
+ * @i: int variable
+ * Return: Always 0 (Success).
  */
+int verifica(int p, int i);
+
+
 int is_prime_number(int n)
 {
-	int i = 0;
+	int i;
 
-	if(i == 1)
-		{
-			return 1;
-		}
+	if (n == 1)
+	{
+		return (0);
+	}
+	else if (n <= 0)
+	{
+		return (0);
+	}
 	else
-		{
-        	if(n % i == 0)
-		{
-			return 0;
-		}
-		else
-		{
-			is_prime_number(n, i - 1);
-		}
+	{
+		i = verifica(n, 2);
+		return (i);
+	}
+}
+/**
+* verifica - Entry point
+* @p: int variable
+* @i: int variable
+* Return: Always 0 (Success).
+ **/
+int verifica(int p, int i)
+{
+	if (p % i == 0 && i < p)
+	{
+		return (0);
+	}
+	else if (i == p)
+	{
+		return (1);
+	}
+	else
+	{
+		return (verifica(p, i + 1));
 	}
 }
