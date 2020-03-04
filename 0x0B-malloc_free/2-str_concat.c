@@ -4,7 +4,7 @@
  * str_concat - function that concatenates two strings.
  * @s1: char array pointer
  * @s2: char array pointer
- * Result: Always 0.
+ * Return: Always 0.
  */
 char *str_concat(char *s1, char *s2)
 {
