@@ -36,7 +36,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		n = size_s2;
 	}
-	asign_malloc = malloc((size_s1 + n + 1) * sizeof(char));
+	asign_malloc = malloc((size_s1 + n + 1) * sizeof(*asign_malloc));
+	if (asign_malloc == NULL)
+	{
+		return (NULL);
+	}
 	for (i = 0 ; i < size_s1 ; i++)
 	{
 		asign_malloc[i] = s1[i];
