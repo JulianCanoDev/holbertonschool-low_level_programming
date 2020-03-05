@@ -5,6 +5,7 @@
  * @s1: char pointer
  * @s2: char pointer
  * @n: int variable
+ * Return: Char
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
