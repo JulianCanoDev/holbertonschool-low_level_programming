@@ -9,19 +9,13 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i = 0;
-	unsigned int size_s1 = 0;
-	unsigned int size_s2 = 0;
+	unsigned int i = 0, size_s1 = 0, size_s2 = 0;
 	char *asign_malloc;
 
 	if (s1 == NULL)
-	{
 		s1 = "";
-	}
 	if (s2 == NULL)
-	{
 		s2 = "";
-	}
 	for (i = 0 ; s1[i] != '\0' ; i++)
 	{
 		size_s1++;
