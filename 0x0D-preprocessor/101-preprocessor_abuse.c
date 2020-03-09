@@ -1,1 +1,1 @@
-#print "Hello, Holberton\n"
+#error "Hello, Holberton\n"
