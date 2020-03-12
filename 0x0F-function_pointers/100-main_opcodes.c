@@ -2,7 +2,9 @@
 
 /**
  * main - Entry point
- * Result: 0
+ * @argc: int arguments
+ * @argv: char argument
+ * Return: 0
  */
 int main(int argc, char *argv[])
 {
