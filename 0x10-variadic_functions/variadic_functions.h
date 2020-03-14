@@ -5,6 +5,17 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
+/**
+ * struct op - Entry point
+ * @op: pointer
+ * @f: function pointer
+ */
+typedef struct op
+{
+	char *op;
+	void (*f)();
+} op_t;
+
 int _putchar(char c);
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
