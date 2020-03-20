@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * holamundo - print
+ * print_first - print
  * Return: void
  */
 void print_first(void)
