@@ -16,9 +16,7 @@ void print_binary(unsigned long int n)
 		printf("0");
 		return;
 	}
-
 	temp = n;
-
 	while (temp != 0)
 	{
 		i++;
@@ -29,8 +27,12 @@ void print_binary(unsigned long int n)
 	{
 		k = n >> count;
 		if (k & 1)
+		{
 			printf("1");
+		}
 		else
+		{
 			printf("0");
+		}
 	}
 }
