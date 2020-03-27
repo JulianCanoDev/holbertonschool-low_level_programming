@@ -1,38 +1,30 @@
 #include "holberton.h"
+void bin_print(unsigned long int n);
 /**
- * print_binary - Entry Point
- * @n: dec input
- * Return: 0
+ * print_binary - prints the binary representation of a number
+ * @n: base 10 number
  */
 void print_binary(unsigned long int n)
 {
-	int i = 0;
-	int count = 0;
-	int k = 0;
-	int temp = 0;
-
 	if (n == 0)
 	{
-		printf("0");
+		_putchar('0');
 		return;
 	}
-	temp = n;
-	while (temp != 0)
-	{
-		i++;
-		temp = temp >> 1;
-	}
 
-	for (count = i - 1; count >= 0; count--)
+	bin_print(n);
+}
+/**
+ * bin_print - prints the binary in reverse
+ * @n: base 10 number
+ */
+void bin_print(unsigned long int n)
+{
+	if (n == 0)
 	{
-		k = n >> count;
-		if (k & 1)
-		{
-			printf("1");
-		}
-		else
-		{
-			printf("0");
-		}
+		return;
 	}
+	else
+		bin_print(n >> 1);
+	_putchar((n & 1) + '0');
 }
