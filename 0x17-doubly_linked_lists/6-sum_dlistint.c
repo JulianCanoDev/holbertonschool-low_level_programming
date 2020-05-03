@@ -3,16 +3,16 @@
 /**
  * sum_dlistint -  function that returns the sum
  * @head: list
- * Return: sum
+ * Return: add
  */
 int sum_dlistint(dlistint_t *head)
 {
-	int suma = 0;
+	int add = 0;
 
 	while (head)
 	{
-		suma += head->n;
+		add = add + head->n;
 		head = head->next;
 	}
-	return (suma);
+	return (add);
 }
