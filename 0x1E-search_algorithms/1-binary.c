@@ -9,7 +9,9 @@ void print_subarray(int *array, size_t size)
 {
 	printf("Searching in array: %d", *array++);
 	while (--size)
+	{
 		printf(", %d", *array++);
+	}
 	printf("\n");
 }
 
@@ -28,14 +30,22 @@ int binary_search(int *array, size_t size, int value)
 	size_t mid = (size - 1) / 2;
 
 	if (array == NULL || size == 0)
+	{
 		return (-1);
+	}
 	print_subarray(array, size);
 	if (value == array[mid])
+	{
 		return (mid);
+	}
 	if (value < array[mid])
+	{
 		return (binary_search(array, mid + 1, value));
+	}
 	r = binary_search(array + mid + 1, size - mid - 1, value);
 	if (r == -1)
+	{
 		return (-1);
+	}
 	return (mid + 1 + r);
 }
