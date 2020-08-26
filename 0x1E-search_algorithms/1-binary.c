@@ -1,51 +1,67 @@
 #include "search_algos.h"
 
 /**
- * print_subarray - subroutine to print out the elements of an array
- * @array: array to print
- * @size: length of array
- */
-void print_subarray(int *array, size_t size)
+ * binary_search - search a value in to ordered array
+ * @array: integer array
+ * @size: number of elements in array
+ * @value: the value to search
+ * Return: the first index with value matched or -1 otherwise
+*/
+
+int binary_search(int *array, size_t size, int value)
 {
-	printf("Searching in array: %d", *array++);
-	while (--size)
+	size_t ini, end;
+	int i;
+
+	if (array == NULL)
+		return (-1);
+	ini = 0;
+	end = size - 1;
+	i = (ini + end) / 2;
+	while (ini <= end)
 	{
-		printf(", %d", *array++);
+		print_array(array, ini, end);
+		i = (ini + end) / 2;
+		if (array[i] == value)
+		{
+			return (i);
+		}
+		else if (array[i] > value)
+		{
+			end = i - 1;
+		}
+		else
+		{
+			ini = i + 1;
+		}
 	}
-	printf("\n");
+	return (-1);
 }
 
 /**
- * binary_search - binary search for element in array
- * @array: array to search
- * @size: size of array
- * @value: value to search for
- *
- * Return: index of element equal to `value`, or -1 if absent or array is
- * NULL or empty.
- */
-int binary_search(int *array, size_t size, int value)
-{
-	int r;
-	size_t mid = (size - 1) / 2;
+ * print_array - search a value in to ordered array
+ * @array: integer array
+ * @ini: initial index to print
+ * @end: end index to print
+*/
 
-	if (array == NULL || size == 0)
+void print_array(int *array, size_t ini, size_t end)
+{
+	size_t i, sw = 0;
+
+	printf("Searching in array: ");
+
+	for (i = ini; i <= end; i++)
 	{
-		return (-1);
+		if (sw == 0)
+		{
+			printf("%d", array[i]);
+			sw = 1;
+		}
+		else
+		{
+			printf(", %d", array[i]);
+		}
 	}
-	print_subarray(array, size);
-	if (value == array[mid])
-	{
-		return (mid);
-	}
-	if (value < array[mid])
-	{
-		return (binary_search(array, mid + 1, value));
-	}
-	r = binary_search(array + mid + 1, size - mid - 1, value);
-	if (r == -1)
-	{
-		return (-1);
-	}
-	return (mid + 1 + r);
+	printf("\n");
 }
